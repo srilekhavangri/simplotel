@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Page 1 CSS */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #FFF2B1, #FFADF5);
+        }
+
+        nav {
+            background-color: #FF7170;
+            text-align: center;
+            padding: 3px;
+            width: 100%;
+            box-sizing: border-box;
+            position: fixed;
+        }
+
+        #navBar {
+            height: 45px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 45px;
+        }
+
+        li {
+            font-family: Georgia, serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            letter-spacing: 3px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        #text-container {
+            margin: 5vh 2vw;
+            width: 45%;
+            max-width: 600px;
+            min-width: 280px;
+        }
+
+        #heading1 {
+            margin-top: 150px;
+            font-size: 55px;
+        }
+
+        #foodImage {
+            height: 100vh;
+            object-fit: cover;
+            width: 50%;
+        }
+
+        #para {
+            font-family: Tahoma, sans-serif;
+            font-size: calc(0.7vw + 0.7vh + 0.5vmin);
+            letter-spacing: 1px;
+        }
+
+
+        /* Page 2 CSS */
+        .container {
+            margin-top: 100px;
+            display: flex;
+        }
+
+        .left-child,
+        .right-child {
+            width: 50%;
+        }
+
+        .left-child {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 4vh 9vw;
+        }
+
+        #img1 {
+            width: 250px;
+            height: 230px;
+        }
+
+        #img2 {
+            width: 300px;
+        }
+
+        #img3 {
+            width: 250px;
+            height: 230px;
+        }
+
+        .right-child {
+            color: black;
+            box-sizing: border-box;
+            width: 50%;
+            margin-top: 90px;
+        }
+
+        #right-child-text {
+            margin-left: -120px;
+            background-color: #FF7170;
+            width: 550px;
+            height: 250px;
+            padding: 35px;
+        }
+
+        #heading2 {
+            font-size: 60px;
+        }
+
+        .right-child p {
+            margin: 0;
+            font-size: larger;
+            letter-spacing: 2px;
+        }
+
+        .right-child img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* Responsive Styles */
+        @media screen and (min-width: 1024px) {
+            #text-container {
+                margin: 5vh 5vw;
+                width: 40%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                position: relative;
+                padding: 1px;
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            #text-container {
+                width: auto;
+                margin: 20px;
+                font-size: calc(2vw + 1vh);
+            }
+
+            #heading1 {
+                margin-top: 10px;
+                font-size: 45px;
+            }
+
+            #para {
+                font-size: 15px;
+            }
+
+            #foodImage {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            nav {
+                position: relative;
+            }
+
+            ul {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            li {
+                margin: 10px 0;
+            }
+
+            a {
+                font-size: 18px;
+            }
+
+            #text-container {
+                margin: 10px;
+                font-size: calc(2.5vw + 1vh);
+            }
+
+            #heading1 {
+                font-size: 35px;
+            }
+
+            #para {
+                font-size: 12px;
+            }
+
+            #foodImage {
+                position: relative;
+                margin-top: 20px;
+            }
+        }
+
+        /* Responsive Styles for Page 2 */
+        @media screen and (max-width: 1024px) {
+
+            .left-child,
+            .right-child {
+                width: 100%;
+            }
+
+            .right-child {
+                margin-top: 20px;
+            }
+
+            #img1,
+            #img3 {
+                width: 90%;
+                height: auto;
+            }
+
+            #img2 {
+                width: 90%;
+            }
+
+            #right-child-text {
+                width: 70%;
+                margin-left: 0;
+                margin-top: 160px;
+            }
+
+            #heading2 {
+                font-size: 40px;
+            }
+
+            .left-child {
+                margin: 4vh 5vw;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .left-child {
+                margin: 4vh 2vw;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+
+            .left-child,
+            .right-child {
+                margin: 4vh 10px;
+            }
+
+            .left-child {
+                margin-top: -40px;
+            }
+
+            #img1,
+            #img3 {
+                width: 90%;
+                height: auto;
+            }
+
+            #img2 {
+                width: 90%;
+            }
+
+            #right-child-text {
+                padding: 10px;
+                width: 60%;
+                margin-top: -30px;
+            }
+
+            #heading2 {
+                font-size: 30px;
+                margin-top: 25px;
+                margin-bottom: 50px;
+            }
+
+            .container {
+                flex-direction: column;
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Restaurant</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#"><img id="navBar" src="images/menu-bar.png" alt="Menu Bar"></a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <div id="text-container">
+            <h1 id="heading1">LOREM IPSUM</h1> <br>
+            <p id="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                id est vitae dolor rhoncus tristique. Maecenas metus quam,
+                rhoncus euismod lorem in, sollicitudin viverra eros. Donec
+                dictum luctus quam ut tristique. Curabitur nec faucibus purus.
+                Quisque congue sem nec justo mollis, in tincidunt erat pretium.
+                Sed pulvinar, massa ac porta viverra.
+            </p> <br> <br> <br>
+            <div
+                style="width: 250px; height: 55px; background-color: #FF7170; display: flex; align-items: center; justify-content: center;">
+                <p style="color: white;">Click Me</p>
+            </div>
+        </div>
+
+        <img id="foodImage" src="images/pexels-robin-stickel-70497.jpg" alt="Food Image">
+    </div>
+
+
+    <!-- End of Page 1 -->
+
+    <!-- Start of Page 2 -->
+
+    <div class="container">
+        <div class="left-child">
+            <table cellspacing="5">
+                <tbody>
+                    <tr>
+                        <td><img src="images/pexels-rachel-claire-6752433.jpg" alt="First Image" Id="img1"></td>
+                        <td rowspan="2" style="padding-left: 15px;"><img src="images\pexels-mister-mister-3434523.jpg"
+                                alt="Second Image" id="img2"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/pexels-eva-bronzini-6141651.jpg" alt="Third Image" id="img3"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="right-child">
+            <div id="right-child-text">
+                <p>LOREM IPSUM</p>
+                <h1 id="heading2">LOREM IPSUM SET ADEMIR</h1>
+                <div style="display: flex; align-items: center;">
+                    <p>Click </p><img src="images/icons8-arrow-30.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br> <br> <br> <br>
+</body>
+
+</html>
